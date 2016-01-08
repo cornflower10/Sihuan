@@ -27,4 +27,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile files('libs/library-1.0.19.jar')
+    compile files('libs/okhttp-urlconnection-2.0.0.jar')
 }

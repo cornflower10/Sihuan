@@ -9,7 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.android.volley.VolleyError;
 import com.sihuan.R;
+import com.sihuan.communication.VolleyInterface;
+import com.sihuan.communication.VolleyRequest;
+import com.sihuan.util.ToastUtil;
+import com.sihuan.util.WriteLog;
 
 public class MainActivity extends BaseActivity {
     private FloatingActionButton fab;
@@ -20,7 +25,31 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         fab = getViewById(R.id.fab);
          toolbar = getViewById(R.id.toolbar);
+        WriteLog.WriteLogCatError("=====fab=======");
         setSupportActionBar(toolbar);
+        mmmm();
+    }
+
+
+    public void mmmm(){
+
+        // String url ="https://www.baidu.com";
+        String url ="https://mmmoffice.com/";
+        VolleyRequest.RequsetGet(this,url , "baidu", new VolleyInterface(
+                VolleyInterface.listener,VolleyInterface.errorListener) {
+            @Override
+            public void onLoadingSuccess(String result) {
+                WriteLog.WriteLogCatError("result"+result);
+                ToastUtil.show(result);
+            }
+
+            @Override
+            public void onLoadingError(VolleyError volleyError) {
+
+                WriteLog.WriteLogCatError("volleyError===="+volleyError.getMessage());
+                ToastUtil.show("volleyError===="+volleyError.getMessage());
+            }
+        });
     }
 
     @Override
