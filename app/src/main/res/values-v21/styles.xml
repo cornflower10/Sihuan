@@ -8,7 +8,7 @@
     </style>
 
 
-    <style name="marginhorizontal" >
+    <style name="marginhorizontal">
         <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
     </style>

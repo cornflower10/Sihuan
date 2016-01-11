@@ -17,13 +17,13 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="marginhorizontal" >
+    <style name="marginhorizontal">
         <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
     </style>
 
-    <style name="yellowButton" parent="marginhorizontal" >
-       <item name="android:textColor">@android:color/white</item>
+    <style name="yellowButton" parent="marginhorizontal">
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@drawable/btn_yellow</item>
     </style>
 

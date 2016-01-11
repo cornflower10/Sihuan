@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activity.LoginActivity"
+    tools:showIn="@layout/activity_login"
+    android:orientation="vertical">
+
+
+    <com.sihuan.ui.base.widget.ClearEditText
+        android:id="@+id/et_name"
+        android:inputType="text"
+        android:hint="@string/phone_email"
+        style="@style/marginhorizontal"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableRight="@drawable/abc_ic_clear_mtrl_alpha"/>
+
+    <com.sihuan.ui.base.widget.ClearEditText
+        android:id="@+id/et_passwd"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:hint="@string/passwd"
+        style="@style/marginhorizontal"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableRight="@drawable/abc_ic_clear_mtrl_alpha"/>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:background="@drawable/btn_yellow"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/login"
+        style="@style/yellowButton"
+        android:onClick="click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

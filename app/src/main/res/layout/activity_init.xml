@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.sihuan.ui.activity.initActivity">
+
+ <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+  <ImageView
+      android:scaleType="fitCenter"
+     android:layout_marginTop="@dimen/activity_vertical_margin"
+     android:src="@mipmap/mmm_background"
+    android:id="@+id/iv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        style="@style/marginhorizontal"
+        >
+        <ImageView
+            android:id="@+id/iv_captcha"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_refresh"
+      android:layout_marginRight="0dp"
+        style="@style/yellowButton"
+         android:text="@string/refresh"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:onClick="click"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+   <com.sihuan.ui.base.widget.ClearEditText
+       android:id="@+id/et_captcha"
+       android:inputType="number"
+       android:maxLength="5"
+       android:hint="@string/captcha"
+       style="@style/marginhorizontal"
+       android:layout_below="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:drawableRight="@drawable/abc_ic_clear_mtrl_alpha"/>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_ok"
+        android:background="@drawable/btn_yellow"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/ok"
+        style="@style/yellowButton"
+        android:onClick="click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
