@@ -1,8 +1,7 @@
 package com.sihuan;
 
-import com.sihuan.application.ApplicationVariable;
-import com.sihuan.communication.OkHttpStack;
-import com.squareup.okhttp.Call;
+
+
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -12,9 +11,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
@@ -25,6 +21,7 @@ import java.security.cert.CertificateFactory;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
+
 
 
 /**
@@ -63,7 +60,6 @@ public class NetTest {
         );
        // }
         mOkHttpClient.setSslSocketFactory(sslContext.getSocketFactory());
-
         Response response =  mOkHttpClient.newCall(new Request.Builder().url("https://mmmoffice.com").build()).execute();
        // String a =  response.message();
         ResponseBody body = response.body();

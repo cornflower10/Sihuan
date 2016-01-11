@@ -2,9 +2,12 @@
 <resources>
     <color name="colorPrimary">@color/green</color>
     <color name="colorPrimaryDark">@color/green</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">@color/green</color>
 
     <color name="green">#2E962E</color>
+    <color name="yellow_normal">#FF8C00</color><!--黄色按钮-->
+    <color name="yellow_press">#5eFF8C00</color><!--黄色按钮-->
+
 
 
     <!--pagerSliding控件-->
